@@ -1,0 +1,161 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="100"
+    android:animateLayoutChanges="true">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="100"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEAM B "
+            android:layout_centerHorizontal="true"
+            android:textSize="40dp"
+            android:textColor="#ff0000"
+            android:fontFamily="sans-serif"
+            android:id="@+id/teamB"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red cards : 0"
+            android:layout_below="@+id/teamB"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/teamBredCardAmount"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow cards : 0"
+            android:layout_below="@+id/teamBredCardAmount"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/teamBYellowCardAmount"
+            >
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fouls : 0"
+            android:layout_below="@+id/teamBYellowCardAmount"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/teamBfoulsAmount">
+
+        </TextView>
+        <ImageButton
+            android:id="@+id/redcard"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/redc"
+            android:scaleType="fitCenter"
+            android:background="?android:selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:onClick="teamBRed">
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red card"
+            android:layout_below="@+id/redcard"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF">
+
+        </TextView>
+        <ImageButton
+            android:id="@+id/yellowCard"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/yellowc"
+            android:scaleType="fitCenter"
+            android:background="?android:selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:onClick="teamBYellow"
+            android:layout_toRightOf="@+id/redcard"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:foregroundGravity="center">
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow card"
+            android:layout_below="@+id/yellowCard"
+            android:layout_toRightOf="@+id/redcard"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+        </TextView>
+        <ImageButton
+            android:id="@+id/noCard"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/foul"
+            android:scaleType="fitCenter"
+            android:background="?android:selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:onClick="teamBNoCard"
+            android:layout_toRightOf="@+id/yellowCard">
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only foul"
+            android:layout_below="@+id/noCard"
+            android:layout_toRightOf="@+id/yellowCard"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF">
+        </TextView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="resetFoulsTeamB"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="back"
+            />
+
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
